@@ -4,20 +4,23 @@
     "time": "18:00",
     "shop": "Card Hive",
     "event": "Weekly Premier",
-    "format": "Constructed"
+    "format": "Constructed",
+    "link": "https://melee.gg/"
   },
   {
     "date": "2026-03-20",
     "time": "19:00",
     "shop": "Gamers Academy Test",
     "event": "Weekly Tournament",
-    "format": "Constructed"
+    "format": "Constructed",
+    "link": "https://melee.gg/"
   },
  {
     "date": "2026-03-20",
     "time": "19:00",
     "shop": "Siren Games",
     "event": "Weekly Tournament",
-    "format": "Sealed"
+    "format": "Sealed",
+    "link": "https://melee.gg/"
   }
 ]
