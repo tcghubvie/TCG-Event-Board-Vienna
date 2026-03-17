@@ -54,31 +54,6 @@ async function loadEvents() {
 }
 
 loadEvents();
-
-// Rendern
-for (let date in grouped) {
-  const dayDiv = document.createElement("div");
-  dayDiv.className = "day";
-
-  const title = document.createElement("h2");
-  title.innerText = date;
-  dayDiv.appendChild(title);
-
-  grouped[date].forEach((e, i, arr) => {
-    let conflict = arr.some(other =>
-      other !== e &&
-      Math.abs(parseInt(other.time) - parseInt(e.time)) <= 1
-    );
-
-    const div = document.createElement("div");
-    div.className = "event " + (conflict ? "conflict" : "normal");
-    div.innerText = `${e.time} – ${e.shop}`;
-
-    dayDiv.appendChild(div);
-  });
-
-  document.getElementById("events").appendChild(dayDiv);
-}
 </script>
 
 </body>
