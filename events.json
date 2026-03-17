@@ -1,6 +1,6 @@
 [
   {
-    "date": "2026-03-17",
+    "date": "2026-03-18",
     "time": "18:00",
     "shop": "Card Hive",
     "event": "Weekly Premier",
@@ -10,7 +10,7 @@
   {
     "date": "2026-03-20",
     "time": "19:00",
-    "shop": "Gamers Academy Test",
+    "shop": "Gamers Academy",
     "event": "Weekly Tournament",
     "format": "Constructed",
     "link": "https://melee.gg/"
