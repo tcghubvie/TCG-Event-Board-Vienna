@@ -95,13 +95,12 @@ title.innerText = d.toLocaleDateString("de-AT", {
       const div = document.createElement("div");
       div.className = "event " + (conflict ? "conflict" : "normal");
       div.innerHTML = `
-  <a href="${e.link || '#'}" target="_blank" style="text-decoration:none; color:inherit;">
-    <div>
-      <div class="time">${e.time}</div>
-      <div class="shop">${e.shop}</div>
-      <div class="meta">${e.event || ""} ${e.format ? "• " + e.format : ""}</div>
-    </div>
-  </a>
+  <div>
+    <div class="time">${e.time}</div>
+    <div class="shop">${e.shop}</div>
+    <div class="meta">${e.event || ""} ${e.format ? "• " + e.format : ""}</div>
+    ${e.link ? `<a href="${e.link}" target="_blank" class="link">Zur Anmeldung →</a>` : ""}
+  </div>
 `;
       dayDiv.appendChild(div);
     });
