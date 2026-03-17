@@ -89,6 +89,10 @@ async function loadEvents() {
 
     const title = document.createElement("h2");
     const d = new Date(date);
+    const today = new Date();
+const isToday =
+  d.toDateString() === today.toDateString();
+    
 title.innerText = d.toLocaleDateString("de-AT", {
   weekday: "long",
   day: "2-digit",
