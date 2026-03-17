@@ -98,11 +98,14 @@ const isToday =
   d.getMonth() === today.getMonth() &&
   d.getFullYear() === today.getFullYear();
     
-title.innerText = d.toLocaleDateString("de-AT", {
+let formatted = d.toLocaleDateString("de-AT", {
   weekday: "long",
   day: "2-digit",
   month: "long",
-  year: "numeric" 
+  year: "numeric"
+});
+
+title.innerText = isToday ? "Heute – " + formatted : formatted;
 });
     dayDiv.appendChild(title);
 
