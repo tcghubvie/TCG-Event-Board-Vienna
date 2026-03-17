@@ -19,7 +19,7 @@
 
 <script>
 async function loadEvents() {
-  const res = await fetch("events.json?=v2");
+  const res = await fetch("events.json?="+ new Date().getTime());
   const events = await res.json();
 
   const grouped = {};
