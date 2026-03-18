@@ -58,6 +58,14 @@ body {
   background: #eee;
   padding: 3px 6px;
   border-radius: 4px;
+  .event-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.event-link:hover {
+  text-decoration: underline;
+}
 }
 </style>
 <div style="margin-bottom: 20px;">
@@ -102,7 +110,11 @@ async function loadCalendar() {
     dayEvents.forEach(e => {
       const el = document.createElement("div");
       el.className = "event";
-      el.innerText = `${e.time} ${e.shop}`;
+      el.innerHTML = e.link
+  ? `<a href="${e.link}" target="_blank" class="event-link">
+       ${e.time} ${e.shop}
+     </a>`
+  : `${e.time} ${e.shop}`;
       dayDiv.appendChild(el);
     });
 
