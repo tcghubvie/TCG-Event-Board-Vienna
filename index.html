@@ -78,7 +78,7 @@ h1 {
 
 <script>
 async function loadEvents() {
- const res = await fetch("https://opensheet.elk.sh/1Pv7OzYXUMfNb1qcz5ayXNH3oVrhmTlHmDv1-a5Cgr0g/SWU")
+  const res = await fetch("events.json?="+ new Date().getTime());
   const events = await res.json();
 
   const grouped = {};
