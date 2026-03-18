@@ -44,5 +44,14 @@
     "format": "Constructed",
     "type": "weekly",
     "link": "https://melee.gg/Hub/Organization/4460"
-  }
+  },
+  {
+     "date": "2026-07-1",
+    "time": "12:00",
+    "shop": "Release Month",
+    "event": "Test",
+    "format": "Pre Release",
+    "type": "special",
+    "link": "https://melee.gg/Hub/Organization/4460"
+  }   
 ]
