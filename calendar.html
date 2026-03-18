@@ -2,6 +2,64 @@
 
 <h1>📅 TCG Kalender Wien</h1>
 
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding: 20px;
+  background: #f5f6f8;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.nav button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background: #007aff;
+  color: white;
+  cursor: pointer;
+}
+
+.nav span {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+}
+
+.day {
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  min-height: 120px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.event {
+  font-size: 11px;
+  margin-top: 4px;
+  background: #eee;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+</style>
 <div style="margin-bottom: 20px;">
   <button onclick="prevMonth()">⬅️</button>
   <span id="monthLabel"></span>
