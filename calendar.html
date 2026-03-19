@@ -148,7 +148,11 @@ const offset = (firstDay + 6) % 7; // Montag = 0
 };
 
 const today = new Date();
-  console.log(i, today.getDate(), month, today.getMonth(), year, today.getFullYear());
+const todayStr = today.toISOString().split("T")[0];
+
+if (dateStr === todayStr) {
+  dayDiv.classList.add("today");
+}
 
 for (let i = 1; i <= daysInMonth; i++) {
   const dayDiv = document.createElement("div");
