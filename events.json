@@ -63,6 +63,24 @@
     "format": "Constructed",
     "type": "special",
     "link": "https://melee.gg/Tournament/View/403823"
-  }   
+  },
+    {
+     "date": "2026-06-01",
+    "time": "11:00",
+    "shop": "Card Hive",
+    "event": "Win a Showcase",
+    "format": "Constructed",
+    "type": "special",
+    "link": "https://melee.gg/Tournament/View/403823"
+  },
+    {
+     "date": "2026-06-01",
+    "time": "12:00",
+    "shop": "SpielRaum",
+    "event": "Win a Showcase",
+    "format": "Constructed",
+    "type": "special",
+    "link": "https://melee.gg/Tournament/View/403823"
+  }
    
 ]
