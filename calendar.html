@@ -154,9 +154,6 @@ for (let i = 1; i <= daysInMonth; i++) {
 
   const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(i).padStart(2,'0')}`;
 
-
-    const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(i).padStart(2,'0')}`;
-
     dayDiv.innerHTML = `<div class="date">${i}</div>`;
 
     const dayEvents = events.filter(e => e.date === dateStr);
