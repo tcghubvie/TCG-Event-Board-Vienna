@@ -55,7 +55,28 @@
     "type": "special",
     "link": "https://melee.gg/Tournament/View/414735"
   },
-     {
+
+   {
+     "date": "2026-04-10",
+    "time": "19:00",
+    "shop": "Gamers Academy",
+    "event": "Store Showdown",
+    "format": "Sealed",
+    "type": "special",
+    "link": "https://melee.gg/Hub/Organization/4460"
+  },
+
+   {
+     "date": "2026-04-17",
+    "time": "19:00",
+    "shop": "Gamers Academy",
+    "event": "Store Showdown",
+    "format": "Constructed",
+    "type": "special",
+    "link": "https://melee.gg/Hub/Organization/4460"
+  },
+
+    {
      "date": "2026-04-26",
     "time": "11:00",
     "shop": "Card Hive",
@@ -64,5 +85,4 @@
     "type": "special",
     "link": "https://melee.gg/Tournament/View/403823"
   }
-   
 ]
