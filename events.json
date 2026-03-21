@@ -1,12 +1,13 @@
 [
    {
-   "date": "2026-03-16",
+    "weekday": 1, 
     "time": "16:00",
     "shop": "Siren Games",
     "event": "Weekly Tournament",
     "format": "Constructed",
     "type": "weekly",
     "link": "https://melee.gg/Hub/Organization/4728"
+    "recurring": true 
   },
     {
   "date": "2026-03-17",
