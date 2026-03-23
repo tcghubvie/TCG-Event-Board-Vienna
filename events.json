@@ -10,26 +10,28 @@
     "recurring": true 
   },
     {
-  "date": "2026-03-17",
+    "weekday": 2, 
     "time": "19:00",
     "shop": "SpielRaum",
     "event": "Weekly Tournament",
     "format": "Constructed",
     "type": "weekly",
-    "link": "https://melee.gg/Hub/Organization/4399"
+    "link": "https://melee.gg/Hub/Organization/4399",
+    "recurring": true 
 },
   
   {
-    "date": "2026-03-18",
+    "weekday": 3,
     "time": "18:00",
     "shop": "Card Hive",
     "event": "Weekly Premier",
     "format": "Constructed",
     "type": "weekly",
-    "link": "https://melee.gg/Tournament/View/414039"
+    "link": "https://melee.gg/Tournament/View/414039",
+    "reccuring": true
   },
     {
-  "date": "2026-03-19",
+    "weekday": 4
     "time": "19:00",
     "shop": "Card Club",
     "event": "Casual",
@@ -38,13 +40,14 @@
     "link": "https://melee.gg/"
 },
   {
-    "date": "2026-03-20",
+   "weekday": 5
     "time": "19:00",
     "shop": "Gamers Academy",
     "event": "Weekly Tournament",
     "format": "Constructed",
     "type": "weekly",
-    "link": "https://melee.gg/Hub/Organization/4460"
+    "link": "https://melee.gg/Hub/Organization/4460",
+     "reccuring": true
   },
  
      {
