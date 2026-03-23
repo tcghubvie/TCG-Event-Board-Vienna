@@ -85,7 +85,7 @@ async function loadEvents() {
   events.forEach(e => {
     if (e.recurring) {
       for (let i = 0; i < 14; i++) {
-        const d = new Date();
+        const d = new Date(today);
         d.setDate(today.getDate() + i);
 
         if (d.getDay() === e.weekday) {
@@ -124,8 +124,7 @@ filteredEvents.forEach(e => {
     dayDiv.className = "day";
 
     const title = document.createElement("h2");
-  const d = new Date(today);
-d.setDate(today.getDate() + i);
+  const d = new Date(date);
     const isToday =
       d.getDate() === today.getDate() &&
       d.getMonth() === today.getMonth() &&
