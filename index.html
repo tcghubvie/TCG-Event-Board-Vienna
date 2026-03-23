@@ -86,7 +86,8 @@ async function loadEvents() {
     if (e.recurring) {
       for (let i = 0; i < 14; i++) {
         const d = new Date(today);
-        d.setDate(today.getDate() + i);
+d.setDate(today.getDate() + i);
+d.setHours(0,0,0,0);
 
         if (d.getDay() === e.weekday) {
           const dateStr = d.toISOString().split("T")[0];
