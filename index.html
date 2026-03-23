@@ -85,13 +85,14 @@ async function loadEvents() {
   events.forEach(e => {
     if (e.recurring) {
       for (let i = 0; i < 14; i++) {
-        const d = new Date(today);
+       const d = new Date(today);
+d.setHours(12, 0, 0, 0); // 👉 wichtig!
 d.setDate(today.getDate() + i);
-d.setHours(0,0,0,0);
 
-        if (d.getDay() === e.weekday) {
-         const dateStr = d.toLocaleDateString("sv-SE");
-
+const dateStr = d.getFullYear() + "-" +
+  String(d.getMonth() + 1).padStart(2, '0') + "-" +
+  String(d.getDate()).padStart(2, '0');
+        
           generatedEvents.push({
             ...e,
             date: dateStr
