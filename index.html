@@ -108,8 +108,15 @@ const dateStr = d.getFullYear() + "-" +
   ];
 
 
+const next7 = new Date(today);
+next7.setDate(today.getDate() + 7);
+
+const next7Str = next7.getFullYear() + "-" +
+  String(next7.getMonth() + 1).padStart(2, '0') + "-" +
+  String(next7.getDate()).padStart(2, '0');
+
 const filteredEvents = allEvents
-  .filter(e => e.date >= todayStr)
+  .filter(e => e.date >= todayStr && e.date <= next7Str)
   .sort((a, b) => a.date.localeCompare(b.date));
 
   const grouped = {};
