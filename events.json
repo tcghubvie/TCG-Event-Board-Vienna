@@ -9,7 +9,8 @@
     "link": "https://melee.gg/Hub/Organization/4728",
     "recurring": true 
   },
-    {
+   
+   {
     "weekday": 2, 
     "time": "19:00",
     "shop": "SpielRaum",
@@ -31,16 +32,18 @@
     "reccuring": true
   },
     {
-    "weekday": 4
+    "weekday": 4,
     "time": "19:00",
     "shop": "Card Club",
     "event": "Casual",
     "format": "Twin Suns",
     "type": "weekly",
     "link": "https://melee.gg/"
+    "reccuring": true 
+       
 },
   {
-   "weekday": 5
+   "weekday": 5,
     "time": "19:00",
     "shop": "Gamers Academy",
     "event": "Weekly Tournament",
