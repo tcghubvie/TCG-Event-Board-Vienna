@@ -90,7 +90,7 @@ d.setDate(today.getDate() + i);
 d.setHours(0,0,0,0);
 
         if (d.getDay() === e.weekday) {
-          const dateStr = d.toISOString().split("T")[0];
+         const dateStr = d.toLocaleDateString("sv-SE");
 
           generatedEvents.push({
             ...e,
