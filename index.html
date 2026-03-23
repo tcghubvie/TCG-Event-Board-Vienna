@@ -124,7 +124,9 @@ filteredEvents.forEach(e => {
     dayDiv.className = "day";
 
     const title = document.createElement("h2");
-    const d = new Date(date);
+   const d = new Date(today);
+    d.setDate(today.getDate() + i);
+    d.setHours(0,0,0,0);
 
     const isToday =
       d.getDate() === today.getDate() &&
