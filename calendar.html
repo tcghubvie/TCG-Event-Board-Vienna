@@ -286,64 +286,72 @@ function nextMonth() {
 loadCalendar();
   let touchStartX = 0;
 let touchEndX = 0;
+let isSwiping = false;
 
 const calendarEl = document.getElementById("calendar");
 
 calendarEl.addEventListener("touchstart", e => {
+  if (isSwiping) return;
   touchStartX = e.changedTouches[0].screenX;
+  calendarEl.style.transition = "none";
 });
 
 calendarEl.addEventListener("touchmove", e => {
+  if (isSwiping) return;
+
   const currentX = e.changedTouches[0].screenX;
   const diff = currentX - touchStartX;
 
-  // 👉 leichter Move Effekt während Swipe
-  calendarEl.style.transform = `translateX(${diff}px)`;
+  // 👉 nur leicht bewegen (gedämpft)
+  calendarEl.style.transform = `translateX(${diff * 0.4}px)`;
 });
 
 calendarEl.addEventListener("touchend", e => {
+  if (isSwiping) return;
+
   touchEndX = e.changedTouches[0].screenX;
   handleSwipe();
 });
 
 function handleSwipe() {
   const diff = touchEndX - touchStartX;
+  const threshold = window.innerWidth * 0.25; // 👉 stabiler
 
-  // 👉 Swipe Threshold
-  if (diff > 80) {
-    // rechts → vorheriger Monat
+  // 👉 zurücksetzen wenn zu klein
+  if (Math.abs(diff) < threshold) {
+    calendarEl.style.transition = "transform 0.2s ease";
+    calendarEl.style.transform = "translateX(0)";
+    return;
+  }
+
+  isSwiping = true;
+
+  calendarEl.style.transition = "transform 0.25s ease";
+
+  if (diff > 0) {
+    // 👉 rechts → vorheriger Monat
     calendarEl.style.transform = "translateX(100%)";
 
     setTimeout(() => {
       prevMonth();
-      calendarEl.style.transition = "none";
-      calendarEl.style.transform = "translateX(-100%)";
+      resetPosition();
+    }, 200);
 
-      requestAnimationFrame(() => {
-        calendarEl.style.transition = "transform 0.25s ease";
-        calendarEl.style.transform = "translateX(0)";
-      });
-    }, 150);
-
-  } else if (diff < -80) {
-    // links → nächster Monat
+  } else {
+    // 👉 links → nächster Monat
     calendarEl.style.transform = "translateX(-100%)";
 
     setTimeout(() => {
       nextMonth();
-      calendarEl.style.transition = "none";
-      calendarEl.style.transform = "translateX(100%)";
-
-      requestAnimationFrame(() => {
-        calendarEl.style.transition = "transform 0.25s ease";
-        calendarEl.style.transform = "translateX(0)";
-      });
-    }, 150);
-
-  } else {
-    // 👉 zurücksnappen wenn Swipe zu klein
-    calendarEl.style.transform = "translateX(0)";
+      resetPosition();
+    }, 200);
   }
+}
+
+function resetPosition() {
+  calendarEl.style.transition = "none";
+  calendarEl.style.transform = "translateX(0)";
+  isSwiping = false;
 }
 </script>
 
