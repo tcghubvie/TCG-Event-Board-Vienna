@@ -282,6 +282,31 @@ function nextMonth() {
 }
 
 loadCalendar();
+  let touchStartX = 0;
+let touchEndX = 0;
+
+const calendarEl = document.getElementById("calendar");
+
+calendarEl.addEventListener("touchstart", e => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+
+calendarEl.addEventListener("touchend", e => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+  const diff = touchEndX - touchStartX;
+
+  if (diff > 50) {
+    // 👉 Swipe rechts → vorheriger Monat
+    prevMonth();
+  } else if (diff < -50) {
+    // 👉 Swipe links → nächster Monat
+    nextMonth();
+  }
+}
 </script>
 
 </body>
